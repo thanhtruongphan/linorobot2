@@ -52,6 +52,7 @@ services:
       custom_robot:=${CUSTOM_ROBOT}
       extra:=${LAUNCH_EXTRA} 
       odom_topic:=${ODOM_TOPIC}
+      lidar_serial_port:=${LIDAR_SERIAL_PORT}
       base_serial_port:=${BASE_SERIAL_PORT}
       joy:=${LAUNCH_JOYSTICK}
     devices:

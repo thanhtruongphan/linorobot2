@@ -64,6 +64,12 @@ def generate_launch_description():
         ),
 
         DeclareLaunchArgument(
+            name='lidar_serial_port',
+            default_value='/dev/ttyUSB0',
+            description='Lidar Serial Port'
+        ),
+
+        DeclareLaunchArgument(
             name='base_serial_port', 
             default_value='/dev/ttyACM0',
             description='Linorobot Base Serial Port'
