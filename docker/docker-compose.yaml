@@ -135,8 +135,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - $HOME/.Xauthority:/root/.Xauthority
-    devices:
-      - /dev/dri:/dev/dri
+    # devices:
+    #   - /dev/dri:/dev/dri
     shm_size: "1gb"
     restart: unless-stopped
 
@@ -151,5 +151,5 @@ services:
       - $HOME/.Xauthority:/root/.Xauthority
     environment:
       - DISPLAY=${DISPLAY}
-    devices:
-      - /dev/dri:/dev/dri
+    # devices:
+    #   - /dev/dri:/dev/dri
