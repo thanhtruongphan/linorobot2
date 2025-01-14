@@ -13,3 +13,11 @@ scan_to_scan_filter_chain:
         min_z: -0.5
         
         invert: true # activate to remove all points outside of the box
+
+    # Angular filter to keep only front, left, and right scans
+    filter2:
+      name: angle_filter
+      type: laser_filters/LaserScanAngularBoundsFilterInPlace
+      params:
+        lower_angle: -1.57  # -90 degrees (left side)
+        upper_angle: 1.57   # +90 degrees (right side)
