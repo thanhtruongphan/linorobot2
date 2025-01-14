@@ -72,6 +72,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libxtst6 \
     && rm -rf /var/lib/apt/lists/*
 
+# install ros-laser-filters
+RUN apt-get update && apt-get install -y \
+    ros-humble-laser-filters
+    
 # Install VirtualGL
 ARG VIRTUALGL_VER="3.1"
 RUN wget -O /tmp/virtualgl.deb https://zenlayer.dl.sourceforge.net/project/virtualgl/${VIRTUALGL_VER}/virtualgl_${VIRTUALGL_VER}_amd64.deb
